@@ -20,21 +20,21 @@ Here’s a quick example to get started:
 using namespace std;
 using namespace CILF;
 int main(){
-	InitWindow(GetWidth(),GetHeight());
+    InitWindow(GetWidth(),GetHeight());
     while(1){
-		Clear(' ');
-		DrawLine(0, 0, GetWidth() - 1, GetHeight() - 1, '\\');
-		DrawLine(0, GetHeight() - 1, GetWidth() - 1, 0, '/');
-		DrawBox(0, 0, GetWidth()-1, GetHeight() - 1, '+', '\r');
-		DrawTitle("CILFront", '-');
-		DrawBox(GetWidth() *0.4, GetHeight() *0.4, GetWidth() *0.6, GetHeight() * 0.6, '#', '>');
+        Clear(' ');
+        DrawLine(0, 0, GetWidth() - 1, GetHeight() - 1, '\\');
+        DrawLine(0, GetHeight() - 1, GetWidth() - 1, 0, '/');
+        DrawBox(0, 0, GetWidth()-1, GetHeight() - 1, '+', '\r');
+        DrawTitle("CILFront", '-');
+        DrawBox(GetWidth() *0.4, GetHeight() *0.4, GetWidth() *0.6, GetHeight() * 0.6, '#', '>');
         DrawText(GetWidth() *0.4+1,GetHeight()*0.4+1," Hello,  ");
-		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," CILFront!!!  ");
-		DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+3, GetWidth() *0.6-1, GetHeight() * 0.4+4, '<', '<');
-		DrawText(GetWidth() *0.4+10,GetHeight()*0.4+5,"   -OwnderDuck");
-		EndDrawing();
-	}
-	return 0;
+        DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," CILFront!!!  ");
+        DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+3, GetWidth() *0.6-1, GetHeight() * 0.4+4, '<', '<');
+        DrawText(GetWidth() *0.4+10,GetHeight()*0.4+5,"   -OwnderDuck");
+        EndDrawing();
+        }
+    return 0;
 }
 ```
 Here’s what it looks like:
