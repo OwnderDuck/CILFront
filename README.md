@@ -4,11 +4,12 @@ A command-line frontend library written in C++.
 > An easy command-line frontend library.
 ---
 ## Features
-- Nothing
+- Nothing.
 ---
 ## Warning
 - ⚠️ The library is not mature yet.
 - ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed.
+- ⚠️ Some functions may suffer from boundary-related issues as they currently lack bounds checking.
 ---
 ## Usage
 `#include "CILFront.hpp"`
