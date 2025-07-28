@@ -17,17 +17,62 @@ A command-line frontend library written in C++.
 ## Examples
 Here’s a quick example to get started:
 ```cpp
-#include "CILFront.hpp"
+#include<bits/stdc++.h>
+#include"CILFront.hpp"
+using namespace std;
 using namespace CILF;
+int main(){
+	InitWindow(GetWidth(),GetHeight());
+    while(1){
+		Clear(' ');
+		DrawLine(0, 0, GetWidth() - 1, GetHeight() - 1, '\\');
+		DrawLine(0, GetHeight() - 1, GetWidth() - 1, 0, '/');
+		DrawBox(0, 0, GetWidth()-1, GetHeight() - 1, '+', '\r');
+		DrawTitle("CILFront", '-');
+		DrawBox(GetWidth() *0.4, GetHeight() *0.4, GetWidth() *0.6, GetHeight() * 0.6, '#', '>');
+        DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2,"Hello,  ");
+		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+4,"CILFront!!!  ");
+		DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+6, GetWidth() *0.6-1, GetHeight() * 0.4+8, '<', '<');
+		DrawText(GetWidth() *0.4+10,GetHeight()*0.4+10,"   -OwnderDuck");
+		
+		EndDrawing();
+	}
 
-int main() {
-    InitWindow(40, 20);
-    SetFPS(60);
-    Clear(' ');
-    DrawText(5, 4, "Hello, CILFront!");
-    EndDrawing();
-    return 0;
+	return 0;
 }
+```
+Here’s what it looks like:
+```
+--------------------------------------------------------CILFron--------------------------------------------------------
++  \\\\                                                                                                          ////  +
++      \\\\                                                                                                  ////      +
++          \\\\                                                                                          ////          +
++              \\\\                                                                                  ////              +
++                  \\\\                                                                          ////                  +
++                      \\\\                                                                  ////                      +
++                          \\\\                                                          ////                          +
++                              \\\\                                                  ////                              +
++                                  \\\\                                          ////                                  +
++                                      \\\\\                                /////                                      +
++                                           \\\\                        ////                                           +
++                                               #########################                                              +
++                                               #Hello,  >>>>>>>>>>>>>>>#                                              +
++                                               #CILFront!!!  >>>>>>>>>>#                                              +
++                                               #<<<<<<<<<<<<<<<<<<<<<<<#                                              +
++                                               #<<<<<<<<<<<<<<<<<<<<<<<#                                              +
++                                               #>>>>>>>>>   -OwnderDuck#                                              +
++                                           ////#########################\\\                                           +
++                                      /////                                \\\\\                                      +
++                                  ////                                          \\\\                                  +
++                              ////                                                  \\\\                              +
++                          ////                                                          \\\\                          +
++                      ////                                                                  \\\\                      +
++                  ////                                                                          \\\\                  +
++              ////                                                                                  \\\\              +
++          ////                                                                                          \\\\          +
++      ////                                                                                                  \\\\      +
++  ////                                                                                                          \\\\  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 ---
 ## API Reference
