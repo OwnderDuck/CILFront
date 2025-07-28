@@ -5,7 +5,7 @@
 | Function | Description| Status |
 |-|-|-|
 | `void InitWindow(int width, int height)` | Initializes the screen buffer with specified dimensions and hides the cursor | ✅ Enabled |
-| `void SetFPS(int fps)` | Sets the frames-per-second rate for rendering | `fps`: desired FPS value | 🚫 Disabled |
+| `void SetFPS(int fps)` | Sets the frames-per-second rate for rendering | 🚫 Disabled |
 
 ---
 
@@ -24,19 +24,19 @@
 
 ## 📺 Rendering & Display
 
-| Function | Description | Parameters | Status |
-|----------|-------------|------------|
-| `EndDrawing()` | Flushes screen buffer contents to console | — |
+| Function | Description | Status |
+|-|-|-|
+| `void EndDrawing()` | Flushes screen buffer contents to console | ✅ Enabled |
 
 ---
 
 ## 📐 Window Utilities
 
-| Function | Description | Return Value | Status |
-|----------|-------------|--------------|
-| `GetWidth()` | Gets current console window width (in characters) | `int` |
-| `GetHeight()` | Gets current console window height (adjusted for vertical scaling) | `int` |
-| `GetDelayTime()` | Returns milliseconds since last frame | `int` |
+| Function | Description | Status |
+|-|-|-|
+| `int GetWidth()` | Gets current console window width (in characters) | ✅ Enabled |
+| `int GetHeight()` | Gets current console window height (adjusted for vertical scaling) | ✅ Enabled |
+| `int GetDelayTime()` | Returns milliseconds since last frame | 🚫 Disabled |
 
 ---
 
