@@ -55,7 +55,7 @@ namespace CILF{
 #endif
 }
     void InitWindow(int initWindowScreenWidth,int initWindowScreenHeight){
-        screenWidth=initWindowScreenWidth,screenHeight=initWindowScreenHeight>>1;
+        screenWidth=initWindowScreenWidth,screenHeight=initWindowScreenHeight;
         HideCursor();
         MoveCursor(0, 0);
         for(int i=0;i<114;i++){
@@ -117,7 +117,6 @@ namespace CILF{
         if(titleFillChar!='\r')for(int i=(screenWidth+titleTitle.length())/2;i<=screenWidth+10;i++)screenBuffer[i][0]=titleFillChar;
     }
     void DrawBox(int x1, int y1, int x2, int y2, char boxChar,char fillChar) {
-        y1>>=1;y2>>=1;
         if(boxChar!='\r'){
             for (int i = x1; i <= x2; i++) {
                 screenBuffer[i][y1] = boxChar; // 上边框
@@ -137,7 +136,6 @@ namespace CILF{
         }
     }
     void DrawLine(int x1, int y1, int x2, int y2, char lineChar) {
-        y1 >>= 1; y2 >>= 1;
         if (lineChar != '\r') {
             int dx = abs(x2 - x1), dy = abs(y2 - y1);
             int sx = x1 < x2 ? 1 : -1;
@@ -155,7 +153,6 @@ namespace CILF{
         }
     }
     void DrawCircle(int centerX, int centerY, int radius, char circleChar,char fillChar) {
-        centerY >>= 1;
         if (circleChar != '\r') {
             for (int y = -radius/2; y <= radius/2; y++) {
                 for (int x = -radius; x <= radius; x++) {
@@ -171,7 +168,6 @@ namespace CILF{
         }
     }
     void DrawText(int x, int y, std::string text){
-        y >>= 1;
         for (size_t i = 0; i < text.length(); i++) {
             if (x + i >= 0 && x + i < screenWidth && y >= 0 && y < screenHeight) {
                 screenBuffer[x + i][y] = text[i];
@@ -205,14 +201,14 @@ namespace CILF{
         if (GetConsoleScreenBufferInfo(hStdout, &csbi)) {
             rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
         }
-        return (rows<<1);
+        return rows;
 #else
         struct winsize w;
         int rows = 25;
         if(ioctl(0, TIOCGWINSZ, &w) == 0) {
             rows = w.ws_row;
         }
-        return (rows<<1);
+        return rows;
 #endif
     }
     int GetDelayTime() {
