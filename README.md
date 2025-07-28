@@ -32,10 +32,8 @@ int main(){
 		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," CILFront!!!  ");
 		DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+3, GetWidth() *0.6-1, GetHeight() * 0.4+4, '<', '<');
 		DrawText(GetWidth() *0.4+10,GetHeight()*0.4+5,"   -OwnderDuck");
-		
 		EndDrawing();
 	}
-
 	return 0;
 }
 ```
