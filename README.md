@@ -9,7 +9,7 @@ A command-line frontend library written in C++.
 ## Warning
 - ⚠️ The library is not mature yet.
 - ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed.
-- ⚠️ Some functions may suffer from boundary-related issues as they currently lack bounds checking.
+- ⚠️ Some functions lack bounds checking.
 ---
 ## Usage
 `#include "CILFront.hpp"`
@@ -21,19 +21,21 @@ using namespace std;
 using namespace CILF;
 int main(){
 	InitWindow(GetWidth(),GetHeight());
-	while(1){
+    while(1){
 		Clear(' ');
-		DrawLine(0,0,GetWidth()-1,GetHeight()-1,'\\');
-		DrawLine(0,GetHeight()-1,GetWidth()-1,0,'/');
-		DrawBox(0,0,GetWidth()-1,GetHeight()-1,'+','\r');
-		DrawTitle("CILFront",'-');
-		DrawBox(GetWidth()*0.4,GetHeight()*0.4,GetWidth()*0.6,GetHeight()*0.6,'#','>');
-		DrawText(GetWidth()*0.4+1,GetHeight()*0.4+2," Hello,  ");
-		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+4," CILFront!!!  ");
-		DrawBox(GetWidth()*0.4+1,GetHeight()*0.4+6,GetWidth()*0.6-1,GetHeight()*0.4+8,'<','<');
-		DrawText(GetWidth()*0.4+10,GetHeight()*0.4+10,"   -OwnderDuck");
+		DrawLine(0, 0, GetWidth() - 1, GetHeight() - 1, '\\');
+		DrawLine(0, GetHeight() - 1, GetWidth() - 1, 0, '/');
+		DrawBox(0, 0, GetWidth()-1, GetHeight() - 1, '+', '\r');
+		DrawTitle("CILFront", '-');
+		DrawBox(GetWidth() *0.4, GetHeight() *0.4, GetWidth() *0.6, GetHeight() * 0.6, '#', '>');
+        DrawText(GetWidth() *0.4+1,GetHeight()*0.4+1," Hello,  ");
+		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," CILFront!!!  ");
+		DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+3, GetWidth() *0.6-1, GetHeight() * 0.4+4, '<', '<');
+		DrawText(GetWidth() *0.4+10,GetHeight()*0.4+5,"   -OwnderDuck");
+		
 		EndDrawing();
 	}
+
 	return 0;
 }
 ```
