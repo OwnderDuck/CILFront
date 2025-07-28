@@ -18,7 +18,7 @@
 | `void DrawBox(int x1, int y1, int x2, int y2, char boxChar, char fillChar)` | Draws a rectangle using border and fill characters | ✅ Enabled |
 | `void DrawLine(int x1, int y1, int x2, int y2, char lineChar)` | Draws a line using Bresenham’s algorithm | ⚠️ Bug |
 | `void DrawCircle(int centerX, int centerY, int radius, char circleChar, char fillChar)` | Draws a circle with optional fill | 🚫 Disabled |
-| `void Title(std::string title, char fillChar)` | Prints a centered title at the top of the screen | ✅ Enabled |
+| `void DrawTitle(std::string title, char fillChar)` | Prints a centered title at the top of the screen | ✅ Enabled |
 
 ---
 
