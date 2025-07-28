@@ -1,4 +1,4 @@
-//Copyright (c) [年份] [你的名字]
+//Copyright (c) 2025 OwnderDuck
 //SPDX-License-Identifier: MIT
 #include<stdio.h>
 #include<iostream>
@@ -102,19 +102,19 @@ namespace CILF{
 		std::cout.flush();
 #endif
         for(int i=0;i<screenHeight-1;i++){
-            for(int j=0;j<screenWidth;j++){
+            for(int j=0;j<screenWidth+1;j++){
                 putchar(screenBuffer[j][i]);
             }
 			putchar('\n');
         }
-        for(int j=0;j<screenWidth;j++){
+        for(int j=0;j<screenWidth+1;j++){
             putchar(screenBuffer[j][screenHeight-1]);
         }
     }
-    void Title(std::string titleTitle,char titleFillChar){
+    void DrawTitle(std::string titleTitle,char titleFillChar){
         if(titleFillChar!='\r')for(int i=0;i<(screenWidth-titleTitle.length())/2;i++)screenBuffer[i][0]=titleFillChar;
         for(int i=(screenWidth-titleTitle.length())/2;i<=(screenWidth+titleTitle.length())/2;i++)screenBuffer[i][0]=titleTitle[i-(screenWidth-titleTitle.length())/2-1];
-        if(titleFillChar!='\r')for(int i=(screenWidth+titleTitle.length())/2;i<=screenWidth+2;i++)screenBuffer[i][0]=titleFillChar;
+        if(titleFillChar!='\r')for(int i=(screenWidth+titleTitle.length())/2;i<=screenWidth+10;i++)screenBuffer[i][0]=titleFillChar;
     }
     void DrawBox(int x1, int y1, int x2, int y2, char boxChar,char fillChar) {
         y1>>=1;y2>>=1;
