@@ -1,3 +1,5 @@
+//Copyright (c) [年份] [你的名字]
+//SPDX-License-Identifier: MIT
 #include<stdio.h>
 #include<iostream>
 #include <sysinfoapi.h>
