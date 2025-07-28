@@ -11,9 +11,7 @@ A command-line frontend library written in C++.
 - ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed.
 ---
 ## Usage
-```
-#include "CILFront.hpp"
-```
+`#include "CILFront.hpp"`
 ## Examples
 Here’s a quick example to get started:
 ```cpp
@@ -22,21 +20,19 @@ using namespace std;
 using namespace CILF;
 int main(){
 	InitWindow(GetWidth(),GetHeight());
-    while(1){
+    	while(1){
 		Clear(' ');
 		DrawLine(0, 0, GetWidth() - 1, GetHeight() - 1, '\\');
 		DrawLine(0, GetHeight() - 1, GetWidth() - 1, 0, '/');
 		DrawBox(0, 0, GetWidth()-1, GetHeight() - 1, '+', '\r');
 		DrawTitle("CILFront", '-');
 		DrawBox(GetWidth() *0.4, GetHeight() *0.4, GetWidth() *0.6, GetHeight() * 0.6, '#', '>');
-        DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," Hello,  ");
+        	DrawText(GetWidth() *0.4+1,GetHeight()*0.4+2," Hello,  ");
 		DrawText(GetWidth() *0.4+1,GetHeight()*0.4+4," CILFront!!!  ");
 		DrawBox(GetWidth() *0.4+1, GetHeight() *0.4+6, GetWidth() *0.6-1, GetHeight() * 0.4+8, '<', '<');
 		DrawText(GetWidth() *0.4+10,GetHeight()*0.4+10,"   -OwnderDuck");
-		
 		EndDrawing();
 	}
-
 	return 0;
 }
 ```
