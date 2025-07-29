@@ -8,12 +8,15 @@ C++命令行前端库。
 > 一个简单C++命令行前端库。
 ---
 ## Features/特性
+- "The character '\r' is used to represent transparency./用'\r'代表透明色。
 - Nothing./没有。
 ---
 ## Warning/警告
-- ⚠️ The library is not mature yet./该库不够成熟。
-- ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed./该库仅在 Windows 上进行了测试。不保证 Linux 和 macOS 的兼容性。
-- ⚠️ Some functions lack bounds checking./某些函数缺少边界检查。
+- The library is not mature yet./该库不够成熟。
+- This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed./该库仅在 Windows 上进行了测试。不保证 Linux 和 macOS 的兼容性。
+- Some functions lack bounds checking./某些函数缺少边界检查。
+- Certain functions are deprecated; please refer to the [Docs](docs.md) for more information./部分函数已弃用，详情见[文档](docs.md)。
+- Support for non-ASCII characters is not guaranteed./不保证对非ASCII字符的支持性。
 ---
 ## Usage/用法
 `#include "CILFront.hpp"`
@@ -91,3 +94,8 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 - **C/C++ Standard Library** – provided by the compiler runtime
 ### Copyright
 Copyright (c) 2025 OwnderDuck
+## Future Plans / 未来计划
+- Optimize graphics rendering performance./图形绘制性能优化。
+- Internationalize documentation./文档国际化。
+- Provide a more comprehensive API./提供更丰富的 API。
+- Fix all warnings./修复所有警告。
