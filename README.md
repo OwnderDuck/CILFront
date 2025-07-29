@@ -1,20 +1,25 @@
 # CILFront
-A command-line frontend library written in C++.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-> An easy command-line frontend library.
+
+A command-line frontend library written in C++.\
+C++命令行前端库。
+
+> An easy command-line frontend library.\
+> 一个简单C++命令行前端库。
 ---
-## Features
-- Nothing.
+## Features/特性
+- Nothing./没有。
 ---
-## Warning
-- ⚠️ The library is not mature yet.
-- ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed.
-- ⚠️ Some functions lack bounds checking.
+## Warning/警告
+- ⚠️ The library is not mature yet./该库不够成熟。
+- ⚠️ This library has only been tested on Windows. Linux and macOS compatibility is not guaranteed./该库仅在 Windows 上进行了测试。不保证 Linux 和 macOS 的兼容性。
+- ⚠️ Some functions lack bounds checking./某些函数缺少边界检查。
 ---
-## Usage
+## Usage/用法
 `#include "CILFront.hpp"`
-## Examples
-Here’s a quick example to get started:
+## Examples/示例
+Here’s a quick example to get started:\
+这是一个快速入门示例：
 ```cpp
 #include"CILFront.hpp"
 using namespace std;
@@ -39,7 +44,8 @@ int main(){
 	return 0;
 }
 ```
-Here’s what it looks like:
+Here’s what it looks like:\
+它看起来像这样：
 ```
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CILFront<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 +  \\\\                                                                                                          ////  +
@@ -73,8 +79,9 @@ Here’s what it looks like:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 ---
-## API Reference
-see [API docs](API.md)
+## API Reference/API 参考
+see [Docs](docs.md)\
+看 [文档](docs.md)
 ---
 ## License
 This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for full terms.
