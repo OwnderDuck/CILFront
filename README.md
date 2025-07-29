@@ -17,6 +17,7 @@ C++命令行前端库。
 - Some functions lack bounds checking./某些函数缺少边界检查。
 - Certain functions are deprecated; please refer to the [Docs](docs.md) for more information./部分函数已弃用，详情见[文档](docs.md)。
 - Support for non-ASCII characters is not guaranteed./不保证对非ASCII字符的支持性。
+- The starting point is not rendered when DrawLine() draws a diagonal line./DrawLine()函数在绘制斜线时起始位置不能被画到。
 ---
 ## Usage/用法
 `#include "CILFront.hpp"`
@@ -85,6 +86,7 @@ Here’s what it looks like:\
 ## API Reference/API 参考
 see [Docs](docs.md)\
 看 [文档](docs.md)
+
 ---
 ## License
 This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for full terms.
